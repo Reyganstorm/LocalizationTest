@@ -29,6 +29,7 @@
 		E800C3E92A37273E00A417DF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E800C3EA2A37274D00A417DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		E800C3EB2A37274D00A417DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E800C3EF2A37399C00A417DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +173,7 @@
 				E800C3D42A37102A00A417DF /* Base */,
 				E800C3E82A37273E00A417DF /* ru */,
 				E800C3EA2A37274D00A417DF /* fr */,
+				E800C3EF2A37399C00A417DF /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

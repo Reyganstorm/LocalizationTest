@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import LocalizationTest
 
 class ViewController: UIViewController {
@@ -22,9 +23,10 @@ class ViewController: UIViewController {
         button.layer.shadowRadius = 10
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         view.backgroundColor = .red
         view.addSubview(button)
         button.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -32,9 +34,30 @@ class ViewController: UIViewController {
         
         button.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
     }
-
+    
     @objc private func buttonDidTap() {
         LocalizationManager().start(at: self)
+    }
+    
+    @objc private func navButtonDidTap() {
+        LocalizationManager().start(at: self)
+    }
+    
+    func setNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .white
+        self.navigationItem.standardAppearance = appearance
+        self.navigationItem.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
+        let imageS = UIImage(systemName: "gearshape")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        let settingsItem = UIBarButtonItem(
+            image: imageS,
+            style: .plain,
+            target: self, action: #selector(navButtonDidTap)
+        )
+        navigationItem.rightBarButtonItem = settingsItem
     }
 }
 
