@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "LocalizationTestPackage",
+    name: "LocalizationTest",
     defaultLocalization: "en",
     platforms: [.iOS(.v13)],
     products: [

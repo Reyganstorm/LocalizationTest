@@ -2,44 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LocalizationTestApp/..">
+   </FileRef>
+   <FileRef
       location = "group:LocalizationTestApp/LocalizationTestApp.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:LocalizationTest"
-      name = "LocalizationTest">
-      <FileRef
-         location = "group:README.md">
-      </FileRef>
-      <FileRef
-         location = "group:Package.resolved">
-      </FileRef>
-      <FileRef
-         location = "group:Package.swift">
-      </FileRef>
-      <Group
-         location = "group:Sources"
-         name = "Sources">
-         <FileRef
-            location = "group:LocalizationTest.swift">
-         </FileRef>
-         <Group
-            location = "group:Resources"
-            name = "Resources">
-            <Group
-               location = "group:en.lproj"
-               name = "en.lproj">
-               <FileRef
-                  location = "group:Localizable.string">
-               </FileRef>
-            </Group>
-         </Group>
-         <Group
-            location = "group:ViewControllers"
-            name = "ViewControllers">
-            <FileRef
-               location = "group:StartViewController.swift">
-            </FileRef>
-         </Group>
-      </Group>
-   </Group>
 </Workspace>
