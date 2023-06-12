@@ -4,7 +4,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "LocalizationTest",
+    name: "LocalizationTestPackage",
+    defaultLocalization: "en",
     platforms: [.iOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -21,6 +22,7 @@ let package = Package(
         .target(
             name: "LocalizationTest",
             dependencies: ["SnapKit"],
-        path: "Sources")
+            path: "Sources",
+            resources: [.process("Resources")])
     ]
 )
