@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalizationTest
 
 class ViewController: UIViewController {
     
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
     }
 
     @objc private func buttonDidTap() {
-        print("Check")
+        LocalizationManager().start(at: self)
     }
 }
 
