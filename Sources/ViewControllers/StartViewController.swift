@@ -32,6 +32,7 @@ final class StartViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupView()
+        dissmisWithSwipe()
     }
     
     private func setupView() {
@@ -52,4 +53,14 @@ final class StartViewController: UIViewController {
             make.top.equalTo(imageView.snp.bottom).offset(30)
         }
     }
+    
+        func dissmisWithSwipe() {
+            let swipe = UISwipeGestureRecognizer(target: self, action: #selector(back))
+            swipe.direction = .right
+            self.view.addGestureRecognizer(swipe)
+        }
+    
+        @objc private func back() {
+            dismiss(animated: false)
+        }
 }

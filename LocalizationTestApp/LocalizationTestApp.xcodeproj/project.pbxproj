@@ -131,6 +131,8 @@
 				fr,
 			);
 			mainGroup = E800C3C12A37102A00A417DF;
+			packageReferences = (
+			);
 			productRefGroup = E800C3CB2A37102A00A417DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

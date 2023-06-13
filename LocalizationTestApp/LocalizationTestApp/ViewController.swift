@@ -11,6 +11,7 @@ import LocalizationTest
 
 class ViewController: UIViewController {
     
+    
     private let button: UIButton = {
         let button = UIButton()
         button.setTitle("Start", for: .normal)
@@ -31,7 +32,6 @@ class ViewController: UIViewController {
         view.addSubview(button)
         button.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
         button.center = view.center
-        
         button.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
     }
     
@@ -40,7 +40,20 @@ class ViewController: UIViewController {
     }
     
     @objc private func navButtonDidTap() {
-        LocalizationManager().start(at: self)
+//        actionSheet = UIAlertController(title: nil, message: "Switch Language", preferredStyle: UIAlertController.Style.actionSheet)
+//        for language in availableLanguages {
+//            let displayName = Localize.displayNameForLanguage(language)
+//            let languageAction = UIAlertAction(title: displayName, style: .default, handler: {
+//                (alert: UIAlertAction!) -> Void in
+//                    Localize.setCurrentLanguage(language)
+//            })
+//            actionSheet.addAction(languageAction)
+//        }
+//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
+//            (alert: UIAlertAction) -> Void in
+//        })
+//        actionSheet.addAction(cancelAction)
+//        self.present(actionSheet, animated: true, completion: nil)
     }
     
     func setNavigationBar() {
@@ -57,7 +70,11 @@ class ViewController: UIViewController {
             style: .plain,
             target: self, action: #selector(navButtonDidTap)
         )
+        
         navigationItem.rightBarButtonItem = settingsItem
+//        navigationItem.
     }
+    
+    
 }
 
